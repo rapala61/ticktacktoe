@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    title Tic Tac Toe
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js')
+    script(type='text/javascript', src='js/tictactoe.js')
+    style.
+      .ttt-container {
+        text-align: center;
+        /*margin-left: auto;
+        margin-right: auto;*/
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .ttt-td {
+        width: 75px;
+        height: 75px;
+        background-color: grey;
+      }
+      .ttt-td:hover {
+        background-color: #b3b3b3;
+      }
+  body
+    div(class='ttt-container')
+      h3 Tic Tac Toe
+      table
+        tr
+          td(class='ttt-td', data-c='0', data-r='0')
+          td(class='ttt-td', data-c='1', data-r='0')
+          td(class='ttt-td', data-c='2', data-r='0')
+        tr
+          td(class='ttt-td', data-c='0', data-r='1')
+          td(class='ttt-td', data-c='1', data-r='1')
+          td(class='ttt-td', data-c='2', data-r='1')
+        tr
+          td(class='ttt-td', data-c='0', data-r='2')
+          td(class='ttt-td', data-c='1', data-r='2')
+          td(class='ttt-td', data-c='2', data-r='2')
+    
+      script(type='text/javascript').
+        $('document').ready(function() {
+          setUpListeners();
+        });
