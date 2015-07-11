@@ -88,13 +88,17 @@ var setUpListeners = function() {
   // Switch state of square to selected
   $('.ttt-td').on('click', function(e) {
     var square = $(e.target);
+    var selected = square.hasClass('selected');
 
-    if ( !getWinner() ) {
-      selectNode( square );
-    }
+    if ( !selected ) {
 
-    if ( !getWinner() ) {
-      randomPick();
+      if ( !getWinner() ) {
+        selectNode( square );
+      }
+
+      if ( !getWinner() ) {
+        randomPick();
+      }
     }
   });
 }
